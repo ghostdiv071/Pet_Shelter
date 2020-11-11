@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Внести пожертвование</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/signin.css">
+</head>
+<body>
+
+<div class="container">
+    <form action="donation.php" method="post">
+        <div class="py-5 text-center">
+            <h2>Поддержать приют</h2>
+            <p class="lead">Здесь можно выбрать размер и способ внесения пожертвования</p>
+        </div>
+        <div class="row">
+            <div class="col-md-8 order-md-1">
+                <div class="col-md-6 mb-3">
+                    <label for="amount">Сумма</label>
+                    <input type="number" class="form-control" id="amount" name="amount" placeholder="" required="" min="1">
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label for="email">Подтвердите электронную почту</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="" required="">
+                </div>
+
+                <h4 class="mb-3">Способ оплаты</h4>
+                <div class="d-block my-3">
+                    <div class="custom-control custom-radio">
+                        <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked="" required="">
+                        <label class="custom-control-label" for="credit">Кредитная карта</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required="">
+                        <label class="custom-control-label" for="debit">Дебетовая карта</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required="">
+                        <label class="custom-control-label" for="paypal">PayPal</label>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label for="cc-name">Имя владельца</label>
+                    <input type="text" class="form-control" id="cc-name" placeholder="" required="">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="cc-number">Номер карты</label>
+                    <input type="text" class="form-control" id="cc-number" placeholder="" required="">
+                </div>
+                <div class="row">
+                    <div class="col-md-3 mb-3">
+                        <label for="cc-expiration">Срок действия</label>
+                        <input type="text" class="form-control" id="cc-expiration" placeholder="" required="">
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="cc-cvv">CVV</label>
+                        <input type="text" class="form-control" id="cc-cvv" placeholder="" required="">
+                    </div>
+                </div>
+                <hr class="mb-4">
+                <button class="btn btn-primary btn-lg btn-block" name="donate" type="submit">Готово!</button>
+
+            </div>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
